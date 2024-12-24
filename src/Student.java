@@ -1,22 +1,29 @@
-import java.io.File;
-import java.util.Scanner;
 public class Student extends Person{
     private int ID;
     private int[] grades;
+    public Student(String name, int age, String gender, String surname, int[] grades, int ID){
+        setGrades(grades);
+        System.out.println(toString());
+        calcGPA(grades);
+        this.ID = ID;
+    }
     public void setGrades(int[] grades){
         this.grades = grades;
     }
-    public Student(String name, int age, String gender, String surname){
-        super(name, age, gender, surname);
+    @Override
+    public String toString(){
+        return "I am a student with ID" + ID + " " + "\n";
+
     }
     public void calcGPA(int[] grades){
-        int sum = 0;
-        int step = 0;
-        for (int i = 0; i < grades.length(); i++){
+        float sum = 0;
+        float step = 0;
+        for (int i = 0; i < grades.length; i++){
             sum += grades[i];
             step++;
         }
-        int res = sum / step;
-        System.out.print(res);
+        float res = sum / step;
+        System.out.println("My GPA: " + res);
     }
+
 }

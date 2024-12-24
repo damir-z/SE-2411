@@ -18,7 +18,7 @@ public class Person {
     }
 
     public String toString(){
-        return "Hi, i'm, " + name + " " + surname +  " a " + age + " years old," + " Gender: " + gender;
+        return "Hi, i'm, " + name + " " + surname +  " a " + age + " years old," + " Gender: " + gender + "\n";
     }
 
 }
