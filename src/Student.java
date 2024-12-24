@@ -1,7 +1,9 @@
 public class Student extends Person{
     private int ID;
     private int[] grades;
+
     public Student(String name, int age, String gender, String surname, int[] grades, int ID){
+        System.out.println("Info about Student:");
         setGrades(grades);
         System.out.println(toString());
         calcGPA(grades);
@@ -12,7 +14,7 @@ public class Student extends Person{
     }
     @Override
     public String toString(){
-        return "I am a student with ID" + ID + " " + "\n";
+        return "I am a student with ID: " + ID;
 
     }
     public void calcGPA(int[] grades){
