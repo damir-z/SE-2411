@@ -19,7 +19,6 @@ public class Main {
         Person person = new Person(scname, scage, scgender, scsurname);
         Student student = new Student(scname, scage, scgender, scsurname, new int[] {100, 100, 100, 95, 85}, 1);
         Teacher teacher = new Teacher("Math", 12, 350000, 15);
-
     }
 
 
