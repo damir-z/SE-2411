@@ -1,13 +1,14 @@
 package se2411;
 
-public class Person implements Payable_student, Payable_employee {
+public class Person{
     public int id;
     protected String name;
     protected String surname;
     public Person(){
 
     }
-    public Person(String name, String surname){
+    public Person(int id, String name, String surname){
+        this.id = id;
         this.name = name;
         this.surname = surname;
     }
@@ -35,10 +36,9 @@ public class Person implements Payable_student, Payable_employee {
         return "Student";
     }
 
-    @Override
-    public double getStipend(){
-        return 36600;
-    }
+
+
+
 
 
 
